@@ -1,3 +1,4 @@
 [submodule "golang/simpleLoadBalancerGo"]
 	path = golang/simpleLoadBalancerGo
 	url = git@github.com:faderosyad/simpleLoadBalancerGo.git
+	branch = main
