@@ -1,7 +1,6 @@
 package httpUtils
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"time"
@@ -17,15 +16,15 @@ func HealthCheck(w http.ResponseWriter, req *http.Request) {
 		"https://facebook.com",
 		"https://x.com",
 		"https://linkedin.com",
+		"https://faderosyad.com",
 	}
 
 	for _, endpoint := range sites {
-		timestamp := time.Now().Format("2006-01-02 15:04:05")
 
 		resp, err := client.Get(endpoint)
 		if err != nil {
+
 			log.Printf("[HEALTHCHECK] Endpoint: %s | ERROR: %v", endpoint, err)
-			fmt.Fprintf(w, "[%s] Endpoint: %s | ERROR: %v\n", timestamp, endpoint, err)
 			continue
 		}
 
